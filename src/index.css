@@ -1,0 +1,120 @@
+/* Ensure full-height background */
+html, body {
+    /* height: 100%; */
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    font-weight: 400;
+    color-scheme: light dark;
+    color: rgba(255, 255, 255, 0.87);
+    background-color: #242424;
+    font-synthesis: none;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+    font-weight: 500;
+    color: #646cff;
+    text-decoration: inherit;
+}
+
+a:hover {
+    color: #535bf2;
+}
+
+h1 {
+    font-size: 3.2em;
+    line-height: 1.1;
+}
+
+button {
+    border-radius: 8px;
+    border: 1px solid transparent;
+    padding: 0.6em 1.2em;
+    font-size: 1em;
+    font-weight: 500;
+    font-family: inherit;
+    background-color: #1a1a1a;
+    cursor: pointer;
+    transition: border-color 0.25s;
+}
+
+button:hover {
+    border-color: #646cff;
+}
+
+button:focus,
+button:focus-visible {
+    outline: 4px auto -webkit-focus-ring-color;
+}
+
+/* Media query for light color scheme */
+@media (prefers-color-scheme: light) {
+    :root {
+        color: #213547;
+        background-color: #ffffff;
+    }
+    a:hover {
+        color: #747bff;
+    }
+    button {
+        background-color: #f9f9f9;
+    }
+}
+
+/* Fullscreen gradient background animation */
+body {
+    height: 100%;
+    background: linear-gradient(
+        135deg,
+        #1a0c3d,   /* deeper purple */
+        #3a0ca3,   /* vibrant royal blue */
+        #9d00ff,   /* brighter neon violet */
+        #008080,   /* teal for balance */
+        #00f0ff,   /* electric cyan */
+        #2f2f57    /* dark navy */
+    );
+    background-size: 500% 500%;
+    animation: gradientBackground 30s ease infinite;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Smooth background animation (merging of colors) */
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.log-stream::-webkit-scrollbar {
+    width: 10px;
+}
+
+.log-stream::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+.log-stream::-webkit-scrollbar-thumb {
+    background-color: #475569;
+    border-radius: 8px;
+    border: 2px solid #1e293b;
+}
+
+.log-stream::-webkit-scrollbar-thumb:hover {
+    background-color: #64748b;
+}
